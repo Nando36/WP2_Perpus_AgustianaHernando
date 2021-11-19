@@ -80,11 +80,11 @@ class Autentifikasi extends CI_Controller
         if($this->session->userdata('email')){
             redirect('user');
         }
-        $this->form_validation->set_rules('nama', 'Nama Lengkap', 'required', 
-        ['required' -> 'Nama Belum Diisi!']);
-        //membuat rule untuk inputan email agar tidak boleh kosong, tidak ada spasi, format email harus valid
-//dan email belum pernah dipakai sama user lain dengan membuat pesan error dengan bahasa sendiri 
-//yaitu jika format email tidak benar maka pesannya 'Email Tidak Benar!!'. jika email belum diisi,
+        //membuat rule untuk inputan nama agar tidak boleh kosong dengan membuat pesan error dengan 
+//bahasa sendiri yaitu 'Nama Belum diisi'
+        $this->form_validation->set_rules('nama', 'Nama Lengkap', 'required', [
+            'required' => 'Nama Belum diis!!'
+        ]);
 //maka pesannya adalah 'Email Belum diisi', dan jika email yang diinput sudah dipakai user lain,
 //maka pesannya 'Email Sudah dipakai'
         $this->form_validation->set_rules('email', 'Alamat Email', 'required|trim|valid_email|is_unique[user.email]', 

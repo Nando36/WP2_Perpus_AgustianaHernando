@@ -1,10 +1,5 @@
 <div class="container">
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-            
-            <div class="col-ig-7">
-
                     <div class="card o-hidden border-0 shadow-lg my-5">
                         <div class="card-body p-0">
                             <!-- Nested Row within Card Body -->
@@ -34,7 +29,7 @@
                                                 <?= form_error('password2', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btnprimary btn-user btn-block">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Daftar Menjadi Member
                                         </button>
                                     </form>
@@ -52,6 +47,4 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
- 
+</div>
