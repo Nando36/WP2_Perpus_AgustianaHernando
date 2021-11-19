@@ -70,4 +70,18 @@ class Autentifikasi extends CI_Controller
                     redirect('autentifikasi');
          }
     }
+    public function blok(){
+        $this->load->view('autentifikasi/blok');
+    }
+    public function gagal(){
+        $this->load->view('autentifikasi/gagal');
+    }
+    public function registrasi(){
+        if($this->session->userdata('email')){
+            redirect('user');
+        }
+        $this->form_validation->set_rules('nama', 'Nama Lengkap', 'required', 
+        ['required' -> 'Nama Belum Diisi!']);
+    }
+
 }    
