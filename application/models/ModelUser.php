@@ -3,9 +3,9 @@ defined('BASEPATH') or exit('No script access allowed');
 
 class ModelUser extends CI_Model
 {
-    public function simpenData($data = null)
+    public function simpanData($data = null)
     {
-        this->db->insert('user', $data);
+        $this->db->insert('user', $data);
     }
     public function cekData($where = null)
     {
@@ -30,3 +30,4 @@ class ModelUser extends CI_Model
         return $this->db->get();
     }
 }
+?>

@@ -10,7 +10,7 @@
                                         <h1 class="h4 text-gray-900 mb-4">Daftar Menjadi Member</h1>
                                     </div>
                                     <?= $this->session->flashdata('pesan'); ?>
-                                    <form class="user" method="post" action="<?= base_url('autentifikasi/registrasi'); ?>">
+                                    <form class="user" method="post" action="<?= site_url('autentifikasi/registrasi'); ?>">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" id="nama" name="nama" placeholder="Nama Lengkap" value="<?= set_value('nama'); ?>">
                                             <?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
@@ -35,13 +35,13 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="<?=base_url('autentifikasi/lupaPassword'); ?>">
+                                        <a class="small" href="<?=site_url('autentifikasi/lupaPassword'); ?>">
                                         Lupa Password?
                                         </a>
                                     </div>
                                     <div class="text-center">
                                         Sudah Menjadi Member?
-                                        <a class="small" href="<?= base_url('autentifikasi'); ?>"> Login!</a>
+                                        <a class="small" href="<?= site_url('autentifikasi'); ?>"> Login!</a>
                                     </div>
                                 </div>
                             </div>
